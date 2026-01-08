@@ -1,5 +1,5 @@
-import assert  from 'assert';
-import { expect, test, type Locator, type Page } from '@playwright/test';
+import assert from 'assert';
+import  { expect, test, type Locator, type Page } from '@playwright/test';
 import { BasePlansV2MockData } from 'Integration-E2E/mocks/baseplanV2MockData';
 import { CommonUtils } from 'Integration-E2E/utilities/common.utils';
 import credentials from '../fixtures/credentials.json';
