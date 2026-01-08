@@ -35,7 +35,7 @@
       "steps": []
     },
     {
-      "name": "validatePlanYears",
+      "name": "validatePlanYearsVisible",
       "params": [],
       "returnType": "Promise<void>",
       "variables": {},
@@ -54,93 +54,11 @@
           "target": "this.planYearSyncedChip",
           "assertion": "toBeVisible",
           "value": null
-        },
-        {
-          "order": 3,
-          "type": "expect",
-          "target": "this.planYearSyncedChipIcon",
-          "assertion": "toHaveText",
-          "value": "check"
-        },
-        {
-          "order": 4,
-          "type": "expect",
-          "target": "this.planYearNotSyncedChip",
-          "assertion": "toBeVisible",
-          "value": null
-        },
-        {
-          "order": 5,
-          "type": "expect",
-          "target": "this.planYearNotSyncedChipIcon",
-          "assertion": "toHaveText",
-          "value": "error_outline"
-        },
-        {
-          "order": 6,
-          "type": "expect",
-          "target": "this.planYearSyncFailedChip",
-          "assertion": "toBeVisible",
-          "value": null
-        },
-        {
-          "order": 7,
-          "type": "expect",
-          "target": "this.planYearSyncFailedChipIcon",
-          "assertion": "toHaveText",
-          "value": "close"
         }
       ]
     },
     {
-      "name": "clickPlanYearChip",
-      "params": [
-        "chipType"
-      ],
-      "returnType": "Promise<void>",
-      "variables": {
-        "chip": "Locator"
-      },
-      "controlFlow": [
-        {
-          "type": "switch",
-          "variable": "chipType",
-          "cases": [
-            {
-              "value": "synced",
-              "assignments": [
-                {
-                  "var": "chip",
-                  "value": "this.planYearSyncedChip"
-                }
-              ]
-            },
-            {
-              "value": "notSynced",
-              "assignments": [
-                {
-                  "var": "chip",
-                  "value": "this.planYearNotSyncedChip"
-                }
-              ]
-            },
-            {
-              "value": "syncFailed",
-              "assignments": [
-                {
-                  "var": "chip",
-                  "value": "this.planYearSyncFailedChip"
-                }
-              ]
-            }
-          ],
-          "default": "throw"
-        }
-      ],
-      "steps": []
-    },
-    {
-      "name": "validateHistoryDataVisible",
+      "name": "validateHistoryVisible",
       "params": [],
       "returnType": "Promise<void>",
       "variables": {},
@@ -163,7 +81,7 @@
       ]
     },
     {
-      "name": "validateDocumentLink",
+      "name": "validateChangedFromDocument",
       "params": [
         "documentName"
       ],
@@ -174,21 +92,18 @@
         {
           "order": 1,
           "type": "expect",
-          "target": "link",
+          "target": "documentLocator",
+          "assertion": "toBeVisible",
+          "value": null
+        },
+        {
+          "order": 2,
+          "type": "expect",
+          "target": "documentLocator.locator('.pdf-icon')",
           "assertion": "toBeVisible",
           "value": null
         }
       ]
-    },
-    {
-      "name": "getDocumentCount",
-      "params": [
-        "section"
-      ],
-      "returnType": "Promise<number>",
-      "variables": {},
-      "controlFlow": [],
-      "steps": []
     }
   ]
 }
