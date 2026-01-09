@@ -1,0 +1,471 @@
+{
+  "pageName": "BasePlanV2Page",
+  "methods": [
+    {
+      "name": "basePlansListIsVisible",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "this.basePlanGridPagination",
+          "assertion": "toBeVisible",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectFilterOptions",
+      "params": [
+        "carrier",
+        "benefitType"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "selectCarrier",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "selectBenefitType",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "clearBenefitTypeSelection",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "benefitTypeElement.locator('t1-icon')",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "setPlanNameSearchText",
+      "params": [
+        "value",
+        "isWrongText"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "clickSearchFilterButton",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "this.page.locator('.ag-cell'",
+          "assertion": "first",
+          "value": ")).toBeVisible("
+        },
+        {
+          "order": 2,
+          "type": "action",
+          "target": "this.selectFiltersButton",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "validateTimeLineDetails",
+      "params": [
+        "basePlanNameFilter"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "this.page.locator('.ag-cell'",
+          "assertion": "first",
+          "value": ")).toBeVisible("
+        },
+        {
+          "order": 2,
+          "type": "expect",
+          "target": "this.page.locator('#dialog-header'",
+          "assertion": "getByText",
+          "value": "Timeline')).toBeVisible("
+        },
+        {
+          "order": 3,
+          "type": "expect",
+          "target": "this.page.getByLabel('Close dialog button')",
+          "assertion": "toBeVisible",
+          "value": null
+        },
+        {
+          "order": 4,
+          "type": "action",
+          "target": "this.selectFiltersButton",
+          "action": "click",
+          "value": null
+        },
+        {
+          "order": 5,
+          "type": "action",
+          "target": "element",
+          "action": "click",
+          "value": null
+        },
+        {
+          "order": 6,
+          "type": "action",
+          "target": "this.page.getByText('Timeline')",
+          "action": "click",
+          "value": null
+        },
+        {
+          "order": 7,
+          "type": "action",
+          "target": "this.page.getByLabel('Close dialog button')",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "clickAddPlanButton",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "this.page",
+          "assertion": "toHaveURL",
+          "value": "/.*\\/manage-plan/"
+        },
+        {
+          "order": 2,
+          "type": "action",
+          "target": "this.addPlanButton",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "getRows",
+      "params": [
+        "planName"
+      ],
+      "returnType": "Promise<any[]>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "setSearchValue",
+      "params": [
+        "searchInput",
+        "value"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "searchInput",
+          "action": "fill",
+          "value": "value"
+        }
+      ]
+    },
+    {
+      "name": "setValueToPlanTypeSearch",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "setValueToExchangeSearch",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "isFilterIconVisible",
+      "params": [
+        "filterLocator"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "filterLocator",
+          "assertion": "toBeVisible",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "isFilterIconVisibleOnPlanTypeColumn",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "isFilterIconVisibleOnExchangeColumn",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "isFilterIconVisibleOnStatusColumn",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "validatePlanNameLink",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "this.firstPlanNameLink",
+          "assertion": "toBeVisible",
+          "value": null
+        },
+        {
+          "order": 2,
+          "type": "expect",
+          "target": "this.firstPlanNameLink",
+          "assertion": "toBeEnabled",
+          "value": null
+        },
+        {
+          "order": 3,
+          "type": "expect",
+          "target": "this.page",
+          "assertion": "toHaveURL",
+          "value": "/.*\\/manage-plan/"
+        },
+        {
+          "order": 4,
+          "type": "action",
+          "target": "this.firstPlanNameLink",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "refreshPlanNameLink",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "clickOnPlanTypeFilter",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.gridPlanTypeFilter",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "clickOnExchangeFilter",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.gridExchangeFilter",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "clickOnStatusFilter",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.gridStatusFilter",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "clickOnElementByName",
+      "params": [
+        "label"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.page.getByText(label).first()",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "noRecordsFoundInGrid",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "this.basePlanGridPagination",
+          "assertion": "toContainText",
+          "value": "of 0"
+        }
+      ]
+    },
+    {
+      "name": "recordsFoundInGrid",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "getCells",
+      "params": [
+        "row"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "escapeInput",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.page.keyboard",
+          "action": "press",
+          "value": "Escape"
+        }
+      ]
+    },
+    {
+      "name": "selectCdkOption",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "cdkPanelOverlay",
+          "assertion": "toBeVisible",
+          "value": null
+        },
+        {
+          "order": 2,
+          "type": "action",
+          "target": "cdkPanelOverlay.locator(option)",
+          "action": "click",
+          "value": null
+        },
+        {
+          "order": 3,
+          "type": "action",
+          "target": "this.page.keyboard",
+          "action": "press",
+          "value": "Escape"
+        }
+      ]
+    }
+  ]
+}
