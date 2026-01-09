@@ -129,7 +129,7 @@ export class BasePlanV2Page {
     );
   }
 
-  public async basePlansListIsVisible(): Promise<any> {
+  public async basePlansListIsVisible_Test(): Promise<any> {
     await this.basePlanGridPagination.waitFor({ state: 'visible' });
     await expect(this.basePlanGridPagination).toBeVisible();
   }
