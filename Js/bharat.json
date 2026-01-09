@@ -2,7 +2,7 @@
   "pageName": "BasePlanV2Page",
   "methods": [
     {
-      "name": "basePlansListIsVisible",
+      "name": "basePlansListIsVisible_Test",
       "params": [],
       "returnType": "Promise<any>",
       "variables": {},
