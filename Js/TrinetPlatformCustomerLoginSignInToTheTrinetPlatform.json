@@ -1,0 +1,13 @@
+{
+  "pageName": "TrinetPlatformCustomerLoginSignInToTheTrinetPlatform",
+  "methods": [
+    {
+      "name": "launchApplication",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    }
+  ]
+}
