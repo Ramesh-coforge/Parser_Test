@@ -1,0 +1,29 @@
+{
+  "pageName": "SyncIssuesPage",
+  "methods": [
+    {
+      "name": "clickReRunSyncIssuesButton",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.reRunButton",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectFailedSyncStatusRows",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "pageName": "BenefitsGateway",
+  "methods": [
+    {
+      "name": "clickOnTheBenefitGateway",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "this.linkBenefitsGateway",
+          "assertion": "toBeVisible",
+          "value": null
+        },
+        {
+          "order": 2,
+          "type": "action",
+          "target": "this.linkBenefitsGateway",
+          "action": "click",
+          "value": null
+        }
+      ]
+    }
+  ]
+}

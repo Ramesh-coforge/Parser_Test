@@ -1,0 +1,37 @@
+{
+  "pageName": "ManageCustomerCarrierContactsPage",
+  "methods": [
+    {
+      "name": "selectCdkOption",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "cdkPanelOverlay",
+          "assertion": "toBeVisible",
+          "value": null
+        },
+        {
+          "order": 2,
+          "type": "action",
+          "target": "cdkPanelOverlay.locator(option)",
+          "action": "click",
+          "value": null
+        },
+        {
+          "order": 3,
+          "type": "action",
+          "target": "this.page.keyboard",
+          "action": "press",
+          "value": "Escape"
+        }
+      ]
+    }
+  ]
+}

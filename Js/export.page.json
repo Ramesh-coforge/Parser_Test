@@ -1,0 +1,328 @@
+{
+  "pageName": "ExportPage",
+  "methods": [
+    {
+      "name": "selectExchange",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.exportPlanAttributeExchange",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectBenefitType",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.exportPlanAttributeBenefitType",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectPlanType",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.exportPlanAttributePlanType",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectQuarter",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.exportPlanAttributeQuarter",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectPlanYear",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.exportPlanAttributeYear",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectDocumentType",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.exportPlanAttributeDocumentType",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectEffectiveDate",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.exportPlanAttributeEffectiveDate",
+          "action": "click",
+          "value": null
+        },
+        {
+          "order": 2,
+          "type": "action",
+          "target": "this.page.keyboard",
+          "action": "press",
+          "value": "Enter"
+        }
+      ]
+    },
+    {
+      "name": "isAllRadioButtonSectionsVisible",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "isMDVLifeBenefitTypesDisabled",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "benefitType",
+          "assertion": "toBeDisabled",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "isMDVDisabilityBenefitTypesDisabled",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "benefitType",
+          "assertion": "toBeDisabled",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "isLifeDIBenefitTypesDisabled",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "benefitType",
+          "assertion": "toBeDisabled",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectCdkOption",
+      "params": [
+        "value"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "expect",
+          "target": "cdkPanelOverlay",
+          "assertion": "toBeVisible",
+          "value": null
+        },
+        {
+          "order": 2,
+          "type": "action",
+          "target": "cdkPanelOverlay.locator(option)",
+          "action": "click",
+          "value": null
+        },
+        {
+          "order": 3,
+          "type": "action",
+          "target": "this.page.keyboard",
+          "action": "press",
+          "value": "Escape"
+        }
+      ]
+    },
+    {
+      "name": "selectNewPlansTab",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.newPlansTab",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectChangePlansTab",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.changePlansTab",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectMissingDocumentsTab",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.missingDocumentsTab",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectPlanAttributesTab",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.planAttributesTab",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectCustomerCarrierContactTab",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.customerCarrierContactsTab",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "selectMissingAttributesOption",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.page.getByLabel('Plans with Missing Attributes')",
+          "action": "check",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "verifyExcelDownloadOrAlert",
+      "params": [
+        "url"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    }
+  ]
+}

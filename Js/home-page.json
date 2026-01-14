@@ -1,0 +1,65 @@
+{
+  "pageName": "HomePage",
+  "methods": [
+    {
+      "name": "isFeatureEnabled",
+      "params": [
+        "featurePropName"
+      ],
+      "returnType": "Promise<boolean>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "clickManageAttributesButton",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "clickManagePlansButton",
+      "params": [],
+      "returnType": "Promise<void>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "clickOnExportButton",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    },
+    {
+      "name": "clickViewSyncIssuesButton",
+      "params": [],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": [
+        {
+          "order": 1,
+          "type": "action",
+          "target": "this.viewSyncIssues",
+          "action": "click",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "goto",
+      "params": [
+        "enableRoleMock = true"
+      ],
+      "returnType": "Promise<any>",
+      "variables": {},
+      "controlFlow": [],
+      "steps": []
+    }
+  ]
+}
